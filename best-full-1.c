@@ -303,7 +303,7 @@ void freeNode(Node* ptr)
 int freeBST(Node* head)
 {
 
-	if(head->left == head)  //root가 head노드이면
+	if(head->left == NULL)  //root가 NULL이면(root에 노드가 없다면)
 	{
 		free(head);         //head노드에 할당된 메모리 해제
 		return 1;           //함수 종료
