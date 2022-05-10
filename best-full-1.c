@@ -17,7 +17,7 @@ typedef struct node {		//노드 구조체
 	struct node *right;		//오른쪽 자식 노드
 } Node;
 
-int initializeBST(Node** h);
+int initializeBST(Node** h);		//이원 탐색 트리 생성
 
 /* functions that you have to implement */
 void inorderTraversal(Node* ptr);	  /* recursive inorder traversal */				//중위 순회 키값 출력
@@ -28,7 +28,7 @@ int deleteLeafNode(Node* head, int key);  /* delete the leaf node for the key */
 Node* searchRecursive(Node* ptr, int key);  /* search the node for the key */		//순환적 탐색
 Node* searchIterative(Node* head, int key);  /* search the node for the key */		//반복적 탐색
 int freeBST(Node* head); /* free all memories allocated to the tree */				//트리에 전체에 할당된 메모리 해제
-void freeNode(Node* ptr);	//노드에 할당된 메모리 해제
+void freeNode(Node* ptr);	//노드와 그 자식 노드들에 할당된 메모리 해제(프로그램 종료시를 제외 하고 사용될때 자식노드들은 NULL이다)
 /* you may add your own defined functions if necessary */
 
 
